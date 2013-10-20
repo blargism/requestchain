@@ -44,6 +44,8 @@ function example_middleware($params, $config) {
 
 Obviously, this middleware is pretty close to worthless, but you see the structure.  A few uses for middleware might be handling a custom session using memcache or sanitizing user input.
 
+The middleware that is used is defined in `config.php`.  It is a numbered array of strings that represent callable functions.  Each entry in the list is called in order.  Order matters, one piece of middleware may depend on the previous piece.  The `$params` variable is passed from middleware to middleware until it reaches the handler.
+
 ## Helpers
 
 These are just functions.  That's it. Nothing more special than that.  They can either be required each request or you can include it for a specific request in the handler file.
