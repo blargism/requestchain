@@ -6,8 +6,10 @@ function debugr($var) {
 	echo '</code></pre>';
 }
 
-function fourohfour() {
-	echo "page not found";
+function debugdump($var) {
+	echo '<pre><code>';
+	var_dump($var);
+	echo '</code></pre>';
 }
 
 function set_layout($slug) {

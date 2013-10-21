@@ -93,7 +93,7 @@ Simple, easy and fun.  Note that you can add anything you want into those variab
 
 ## Views
 
-I wasn't sure if I event wanted to include views, but since we almost always want to send output of some kind, it made sense to include a VERY simple view handler as well.  Right now it's burned in, but slated in the near future I'll make them more portable.  Views come in two breeds:
+I wasn't sure if I event wanted to include views, but since we almost always want to send output of some kind, it made sense to include a VERY simple view handler as well.  Right now, that handler is two different function calls that allow you to do whatever you want.  These function calls are `render()` and `fourohfour()`.  Each does EXACTLY what you would expect.  There is a very simple system provided by default.  It is detailed below.
 
 ### Views
 

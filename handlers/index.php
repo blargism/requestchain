@@ -2,6 +2,6 @@
 
 function get_request() {
 	return [
-		'thing' => '123'
+		'traditional' => 'Hello World'
 	];
 }

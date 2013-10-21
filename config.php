@@ -2,13 +2,19 @@
 
 return [
 	'requirements' => [
-		'protected/tools.php',
-		'protected/middleware.php'
+		'helpers/tools.php',
+		'middleware/base.php',
+		'helpers/mysql.php',
+		'helpers/view.php'
 	],
 	'middleware' => [
 		'basic_router'
 	],
-	'routes' => [
-		
+	'layout' => '/default',
+	'mysql' => [
+		'host' => 'localhost',
+		'user' => 'test',
+		'password' => 'testing123',
+		'database' => 'test'
 	]
 ];

@@ -74,21 +74,10 @@ if(function_exists($params['method'])) {
 	// get the array of variables for the view
 	$vars = $params['method']($params, $config);
 
-	// Create local variables from the string values of the keys
-	foreach($vars as $key => $value) {
-		${$key} = $value;
-	}
-
-	// Capture the base view output
-	ob_start();
-	include($params['view_path']);
-	$page_contents = ob_get_clean();
-
-	// merge the base view output with the configured layout
-	include($params['layout_path']);
+	render($vars, $params, $config);
 } else {
 	// call the fourohfour method, recommended this gets adjusted to
 	// something better
-	fourohfour();
+	fourohfour($params, $config);
 }
 
